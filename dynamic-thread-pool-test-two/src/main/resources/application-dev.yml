@@ -1,0 +1,27 @@
+server:
+  port: 8092
+
+# 线程池配置
+thread:
+  pool:
+    executor:
+      config:
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        block-queue-size: 5000
+        policy: CallerRunsPolicy
+
+# 动态线程池配置
+dynamic-thread-pool:
+  registry:
+    redis:
+      host: localhost
+      port: 6379
+    report-cron: "0/10 * * * * ?"
+  alarm:
+    enabled: true
+    access-token:
+      ding-ding: 586cb499795791acf61a20977c4cc2d76cf941f3777fa1d75240b12f3ba5de0e
+    use-platform:
+      - "DingDing"
