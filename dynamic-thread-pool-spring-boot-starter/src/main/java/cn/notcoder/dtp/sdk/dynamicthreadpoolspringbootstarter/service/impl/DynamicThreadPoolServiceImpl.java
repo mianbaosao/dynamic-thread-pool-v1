@@ -26,6 +26,7 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
 
     private String applicationName;
 
+    //其中的键是线程池的名称（beanName）threadPoolExecutor01、threadPoolExecutor02
     private Map<String, ThreadPoolExecutor> threadPoolExecutorMap;
 
     private IAlarmService alarmService;
@@ -41,7 +42,6 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
                         executor
                 )
         ));
-
         return threadPools;
     }
 

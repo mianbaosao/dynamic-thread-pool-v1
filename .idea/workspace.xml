@@ -4,193 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cd9a3e2-bebc-4cb0-bf9f-7c37a46d20fc" name="Changes" comment="更新 README.md" />
+    <list default="true" id="28dcc25d-ce13-40ab-a5a2-dd1e30dc17f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/service/impl/DynamicThreadPoolServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/service/impl/DynamicThreadPoolServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/trigger/job/ThreadPoolDataReportJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/trigger/job/ThreadPoolDataReportJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpooltest/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpooltest/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpooltest/runner/ThreadPoolRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpooltest/runner/ThreadPoolRunner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
-    <option name="PARALLEL_COMPILATION" value="true" />
-  </component>
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/test-starter">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="package-info" />
-        <option value="Enum" />
-        <option value="JUnit5 Test Class" />
-        <option value="AnnotationType" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-19.0.2/lib/src.zip!/java.base/java/lang/Thread.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.jdks/corretto-19.0.2/lib/src.zip!/java.base/java/util/concurrent/LinkedBlockingQueue.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="jar://D:/MavenRepository/org/redisson/redisson-spring-boot-starter/3.26.0/redisson-spring-boot-starter-3.26.0-sources.jar!/org/redisson/spring/starter/RedissonAutoConfiguration.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="jar://D:/MavenRepository/org/redisson/redisson/3.26.0/redisson-3.26.0-sources.jar!/org/redisson/api/RList.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://D:/MavenRepository/org/springframework/spring-core/5.3.24/spring-core-5.3.24.jar!/org/springframework/cglib/proxy/MethodProxy.class" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mianbaosao&quot;
+  }
 }</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/dynamic-thread-pool-web-frontend/package.json" />
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mianbaosao/dynamic-thread-pool-v1.git&quot;,
+    &quot;accountId&quot;: &quot;df11d691-928b-4b2d-8ffd-33c448a17eca&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2k6VyK8y2jLNFxiXqzUTosDe0r4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2pOFQdrVGtYfhdAJh1jgg7gc5Pa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DynamicThreadPoolTestApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DynamicThreadPoolTestTwoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTest.testDynamicThreadPoolRedisTopic (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTest.testDynamicThreadPoolRedisTopic.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.testAlarmService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.testAlarmStrategy.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.testDingAlarm.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.testDynamicThreadPoolRedisTopic.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DynamicThreadPoolTestApplicationTests.testThreadPool.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cn-test-starter [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cn-test-starter [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool-spring-boot-starter [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool-spring-boot-starter [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool-test [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dynamic-thread-pool-test [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.test-starter [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.test-starter [install].executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Lombok plugin&quot;: &quot;Lombok integration problem&quot;,
-    &quot;Notification.DoNotAsk-Lombok plugin&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DynamicThreadPoolTestApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DynamicThreadPoolTestTwoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/dynamic-thread-pool-master (3)/dynamic-thread-demo/dynamic-thread-pool-v1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.setup.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3091954&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\dynamic-thread-pool-master (3)\\dynamic-thread-demo\\dynamic-thread-pool-7518-banchengkemeng-main\\dynamic-thread-pool-web-frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DynamicThreadPoolTestApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "E:\\dynamic-thread-pool-master (3)\\dynamic-thread-demo\\dynamic-thread-pool-v1\\dynamic-thread-pool-web-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\code\dynamic-thread-pool\imgs" />
-      <recent name="E:\code\dynamic-thread-pool\dynamic-thread-pool-spring-boot-starter\src\main\resources" />
-      <recent name="E:\code\dynamic-thread-pool\dynamic-thread-pool-spring-boot-starter\src\main\resources\web" />
-      <recent name="E:\code\dynamic-thread-pool\dynamic-thread-pool-spring-boot-starter\src\main\resources\static" />
-      <recent name="E:\code\dynamic-thread-pool\docs\dev-ops\grafana" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\code\dynamic-thread-pool\docs\dev-ops\prometheus" />
-      <recent name="E:\code\dynamic-thread-pool" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.config" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.notcoder.cnteststarter" />
-      <recent name="site.bugstack.cnnotcoderteststarter" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="MicronautRunConfigurationType" />
-        <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.DynamicThreadPoolTestTwoApplication">
+}]]></component>
+  <component name="RunManager" selected="Application.DynamicThreadPoolTestApplication">
     <configuration name="DynamicThreadPoolTestApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.notcoder.dtp.sdk.dynamicthreadpooltest.DynamicThreadPoolTestApplication" />
       <module name="dynamic-thread-pool-test" />
@@ -204,28 +77,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicThreadPoolTestTwoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.notcoder.dynamicthreadpooltesttwo.DynamicThreadPoolTestTwoApplication" />
-      <module name="dynamic-thread-pool-test-two" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.notcoder.dynamicthreadpooltesttwo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="dynamic-thread-pool-v1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicThreadPoolTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="dynamic-thread-pool-v1" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DynamicThreadPoolTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="dynamic-thread-pool-test" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.notcoder.dtp.sdk.dynamicthreadpooltest.DynamicThreadPoolTestApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.notcoder.dtp.sdk.dynamicthreadpooltest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,47 +102,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/dynamic-thread-pool-web-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/dynamic-thread-pool-web-frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Application.DynamicThreadPoolTestTwoApplication" />
-      <item itemvalue="Application.DynamicThreadPoolTestApplication" />
-      <item itemvalue="npm.dev" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="Spring Boot.DynamicThreadPoolTestTwoApplication" />
-      <item itemvalue="Spring Boot.DynamicThreadPoolTestApplication" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DynamicThreadPoolTestApplication" />
-        <item itemvalue="Application.DynamicThreadPoolTestTwoApplication" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="Spring Boot.DynamicThreadPoolTestApplication" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -292,270 +119,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8cd9a3e2-bebc-4cb0-bf9f-7c37a46d20fc" name="Changes" comment="" />
-      <created>1722604269016</created>
+      <changelist id="28dcc25d-ce13-40ab-a5a2-dd1e30dc17f1" name="Changes" comment="" />
+      <created>1732629200025</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722604269016</updated>
-      <workItem from="1722604270124" duration="12921000" />
-      <workItem from="1722617533145" duration="536000" />
-      <workItem from="1722666699768" duration="21344000" />
-      <workItem from="1722760397393" duration="6687000" />
-      <workItem from="1722767099895" duration="5629000" />
-      <workItem from="1722779263237" duration="26000" />
-      <workItem from="1722779300114" duration="5342000" />
-      <workItem from="1722836970145" duration="4511000" />
-      <workItem from="1722841739953" duration="45000" />
-      <workItem from="1722841795870" duration="395000" />
-      <workItem from="1722842219191" duration="29619000" />
-      <workItem from="1722928940020" duration="13655000" />
-      <workItem from="1723015697111" duration="3109000" />
-      <workItem from="1723096880438" duration="12799000" />
-      <workItem from="1724146441426" duration="5743000" />
-      <workItem from="1724466956119" duration="21028000" />
-      <workItem from="1724554131889" duration="18932000" />
-      <workItem from="1724637125950" duration="27248000" />
-      <workItem from="1724681452266" duration="24000" />
-      <workItem from="1724681487791" duration="1077000" />
-      <workItem from="1724725223658" duration="11548000" />
-      <workItem from="1725099566677" duration="2055000" />
-      <workItem from="1732264072084" duration="877000" />
-      <workItem from="1732264959658" duration="5763000" />
-      <workItem from="1732270848371" duration="3063000" />
-      <workItem from="1732275339441" duration="7986000" />
-      <workItem from="1732284052240" duration="33519000" />
-      <workItem from="1732535580460" duration="19224000" />
-      <workItem from="1732620439251" duration="4053000" />
-      <workItem from="1732625955492" duration="16000" />
-      <workItem from="1732625984735" duration="11000" />
-      <workItem from="1732626002910" duration="11000" />
-      <workItem from="1732626030033" duration="13000" />
-      <workItem from="1732626049299" duration="7000" />
-      <workItem from="1732626089279" duration="801000" />
+      <updated>1732629200025</updated>
+      <workItem from="1732629201252" duration="821000" />
+      <workItem from="1732696932015" duration="389000" />
+      <workItem from="1732698685106" duration="193000" />
+      <workItem from="1732699384495" duration="117000" />
+      <workItem from="1732699513901" duration="2058000" />
+      <workItem from="1732706364623" duration="6115000" />
     </task>
-    <task id="LOCAL-00001" summary="update README.md">
-      <option name="closed" value="true" />
-      <created>1722617801984</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1722617801984</updated>
-    </task>
-    <task id="LOCAL-00002" summary="添加 Redis注册中心。存在Bug, 无法覆盖原来的redisClient Bean">
-      <option name="closed" value="true" />
-      <created>1722709773885</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1722709773885</updated>
-    </task>
-    <task id="LOCAL-00003" summary="修复redisClient相关Bug, 完成定时上报线程池功能">
-      <option name="closed" value="true" />
-      <created>1722794519365</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1722794519366</updated>
-    </task>
-    <task id="LOCAL-00004" summary="修复redisClient相关Bug, 完成定时上报线程池功能">
-      <option name="closed" value="true" />
-      <created>1722837275000</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1722837275000</updated>
-    </task>
-    <task id="LOCAL-00005" summary="修复redisClient相关Bug, 完成定时上报线程池功能">
-      <option name="closed" value="true" />
-      <created>1722837336576</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1722837336576</updated>
-    </task>
-    <task id="LOCAL-00006" summary="完成订阅发布功能，初步完成Web接口">
-      <option name="closed" value="true" />
-      <created>1722878566579</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1722878566579</updated>
-    </task>
-    <task id="LOCAL-00007" summary="后端全部完成,前端初步搭建">
-      <option name="closed" value="true" />
-      <created>1723040610557</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1723040610557</updated>
-    </task>
-    <task id="LOCAL-00008" summary="后端优化：增加告警机制">
-      <option name="closed" value="true" />
-      <created>1724504225362</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1724504225362</updated>
-    </task>
-    <task id="LOCAL-00009" summary="后端优化：整合监控 Prometheus+Grafana">
-      <option name="closed" value="true" />
-      <created>1724598091267</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1724598091267</updated>
-    </task>
-    <task id="LOCAL-00010" summary="收尾,README.md更新">
-      <option name="closed" value="true" />
-      <created>1724732357468</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1724732357468</updated>
-    </task>
-    <task id="LOCAL-00011" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724732912787</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1724732912787</updated>
-    </task>
-    <task id="LOCAL-00012" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724732998128</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1724732998128</updated>
-    </task>
-    <task id="LOCAL-00013" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724733388650</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1724733388650</updated>
-    </task>
-    <task id="LOCAL-00014" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724733457691</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1724733457691</updated>
-    </task>
-    <task id="LOCAL-00015" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724737236684</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1724737236684</updated>
-    </task>
-    <task id="LOCAL-00016" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724737633396</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1724737633396</updated>
-    </task>
-    <task id="LOCAL-00017" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1724737896313</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1724737896313</updated>
-    </task>
-    <task id="LOCAL-00018" summary="更新">
-      <option name="closed" value="true" />
-      <created>1724739008555</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1724739008555</updated>
-    </task>
-    <task id="LOCAL-00019" summary="更新">
-      <option name="closed" value="true" />
-      <created>1724739064790</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1724739064790</updated>
-    </task>
-    <task id="LOCAL-00020" summary="更新 README.md">
-      <option name="closed" value="true" />
-      <created>1725109096745</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1725109096745</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="nginx.conf" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/dynamic-thread-pool-web-frontend" />
-    </ignored-roots>
-    <MESSAGE value="update README.md" />
-    <MESSAGE value="添加 Redis注册中心。存在Bug, 无法覆盖原来的redisClient Bean" />
-    <MESSAGE value="修复redisClient相关Bug, 完成定时上报线程池功能" />
-    <MESSAGE value="完成订阅发布功能，初步完成Web接口" />
-    <MESSAGE value="后端全部完成,前端初步搭建" />
-    <MESSAGE value="后端优化：增加告警机制" />
-    <MESSAGE value="后端优化：整合监控 Prometheus+Grafana" />
-    <MESSAGE value="收尾,README.md更新" />
-    <MESSAGE value="更新" />
-    <MESSAGE value="更新 README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新 README.md" />
-  </component>
-  <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.redisson.config.Config" memberName="transportMode" />
-      </pinned-members>
-    </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="((java.util.concurrent.ConcurrentHashMap)((DefaultListableBeanFactory) beanFactory).allBeanNamesByType).entrySet().toArray()[8]" custom="java.util.concurrent.ConcurrentHashMap" />
-        <watch expression="future" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

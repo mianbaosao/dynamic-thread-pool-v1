@@ -26,7 +26,7 @@ public class ThreadPoolDataReportJob {
         List<ThreadPoolConfigEntity> threadPoolConfigEntities = dynamicThreadPoolService.queryThreadPoolList();
         registry.reportThreadPool(threadPoolConfigEntities);
 
-        //log.info("动态线程池, 上报线程池信息: {}", threadPoolConfigEntities);
+        log.info("动态线程池, 上报线程池信息: {}", threadPoolConfigEntities);
 
         // 遍历每个线程池信息, 上报配置信息
         threadPoolConfigEntities.forEach(threadPoolConfigEntity -> {
@@ -35,7 +35,7 @@ public class ThreadPoolDataReportJob {
 
             registry.reportUpdateThreadPoolConfigParameter(updateThreadPoolConfigDTO);
 
-          //  log.info("动态线程池, 上报线程池配置信息: {}", updateThreadPoolConfigDTO);
+            log.info("[更新完成]动态线程池, 上报线程池配置信息: {}", updateThreadPoolConfigDTO);
         });
     }
 }
