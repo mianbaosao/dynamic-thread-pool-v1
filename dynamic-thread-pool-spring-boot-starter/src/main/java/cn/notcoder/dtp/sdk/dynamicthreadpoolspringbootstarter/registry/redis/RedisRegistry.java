@@ -39,7 +39,6 @@ public class RedisRegistry implements IRegistry {
         if (AlarmServiceImpl.canSendForThreadPoolDanger()) {
             alarmService.sendIfThreadPoolHasDanger(threadPoolConfigEntityList);
         }
-
         // 获取Redis中的线程池配置列表
         RList<ThreadPoolConfigEntity> list = RedisUtils.getPoolConfigRList(redissonClient);
         // 如果Redis中的线程池配置列表为空，则将传入的线程池配置列表添加到Redis中

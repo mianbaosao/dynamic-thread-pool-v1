@@ -52,8 +52,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 @EnableConfigurationProperties(DynamicThreadPoolRegistryRedisAutoProperties.class)
 @EnableScheduling
 // 导入自动配置类
-@ImportAutoConfiguration({DynamicThreadPoolWebAutoConfig.class, DynamicThreadPoolAlarmAutoConfig.class})public class DynamicThreadPoolAutoConfig {
-
+@ImportAutoConfiguration({DynamicThreadPoolWebAutoConfig.class, DynamicThreadPoolAlarmAutoConfig.class})
+public class DynamicThreadPoolAutoConfig {
+    //RedissonClient的配置
     @Bean
     public RedissonClient redissonClient(DynamicThreadPoolRegistryRedisAutoProperties properties) {
         Config config = new Config();
