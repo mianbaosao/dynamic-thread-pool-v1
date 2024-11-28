@@ -19,4 +19,5 @@ public class DynamicThreadPoolAlarmAutoConfig {
     public IAlarmService alarmService() {
         return new AlarmServiceImpl();
     }
+
 }

@@ -148,8 +148,6 @@ public class DynamicThreadPoolAutoConfig {
             if (updateThreadPoolConfigDTO == null) {
                 return;
             }
-
-
             dynamicThreadPoolService.updateThreadPoolConfig(
                     updateThreadPoolConfigDTO
             );
