@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,7 +28,6 @@ public class AlarmServiceImpl implements IAlarmService {
 
     @Override
     @Async
-// 表示该方法是一个异步方法，即该方法会在后台执行，不会阻塞主线程
     public void send(AlarmMessageDTO message) {
         log.info("告警推送: {}", message);
 
@@ -53,16 +53,32 @@ public class AlarmServiceImpl implements IAlarmService {
     public void sendIfThreadPoolHasDanger(List<ThreadPoolConfigEntity> pools) {
         List<ThreadPoolConfigEntity> dangerPools = new ArrayList<>();
         for (ThreadPoolConfigEntity pool : pools) {
-            // 活跃线程数达到最大 且 阻塞队列已满
-            if (Objects.equals(pool.getActiveThreadCount(), pool.getMaximumPoolSize())
-                    && pool.getRemainingCapacity() == 0) {
-                dangerPools.add(pool);
+            try {
+                // 活跃线程数达到最大 且 阻塞队列已满
+                if (Objects.equals(pool.getActiveThreadCount(), pool.getMaximumPoolSize())
+                        && pool.getRemainingCapacity() == 0) {
+                    dangerPools.add(pool);
+                }
+            } catch (Exception e) {
+                // 捕获线程池异常并打印堆栈
+                log.error("线程池异常: {}", pool.getThreadPoolName(), e);
+
+                // 生成并发送告警信息
+                AlarmMessageDTO alarmMessageDTO = AlarmMessageDTO
+                        .buildAlarmMessageDTO("线程池发生异常")
+                        .appendParameter("线程池名称", pool.getThreadPoolName())
+                        .appendParameter("异常信息", e.getMessage())
+                        .appendParameter("堆栈信息", Arrays.toString(e.getStackTrace()));
+
+                send(alarmMessageDTO);
+                continue; // 继续处理其他线程池
             }
         }
 
         if (dangerPools.isEmpty()) {
             return;
         }
+
         AlarmMessageDTO alarmMessageDTO = AlarmMessageDTO
                 .buildAlarmMessageDTO("超出线程池处理能力")
                 .appendParameter("告警线程池数", dangerPools.size());
@@ -88,7 +104,6 @@ public class AlarmServiceImpl implements IAlarmService {
         );
         job.run(60 * 10);
     }
-
 
     public static synchronized Boolean canSendForThreadPoolDanger() {
         return canSendForThreadPoolDanger;
