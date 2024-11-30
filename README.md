@@ -2,10 +2,8 @@
 # 项目介绍
 
 ## 简介
-本项目是采用分布式架构的动态线程池组件，通过SpringBoot Starter的形式引入业务项目，自带web页面，可监控系统的线程池运行状态，动态修改线程池参数，解决并发业务中实际环境复杂，线程池参数不易设置恰当，而重新设置参数却需要重启系统的弊端。
-
+一个动态线程池组件SDK，该SDK提供灵活的配置管理和实时的性能监控功能，支持根据业务需求动态调整线程池参数，并能够实时监控线程池状态，及时发现潜在问题。通过这一解决方案，我们能够在不重启应用的情况下，快速响应负载变化，提升系统性能并确保稳定运行。
 ## 技术选型
-- Umi
 - React
 - Ant Design
 - SpringBoot
@@ -16,7 +14,7 @@
 
 ## 预览
 
-![image-20240827115452285](https://dtp-pictures.oss-cn-beijing.aliyuncs.com/image-20240827115452285.png)
+![image](https://github.com/user-attachments/assets/8f94b979-ad5c-4fc9-abc5-32e258d855b2)
 
 ![image-20240827115504869](https://dtp-pictures.oss-cn-beijing.aliyuncs.com/image-20240827115504869.png)
 
@@ -29,7 +27,7 @@
 
 ## Web管理界面
 
-所有引入 starter 的项目中，有一个节点是 master, 只有master 会注入 web管理端的 bean (当时感觉这样比较方便，做到后面感觉不如单独抽出一个管理系统的项目来)
+所有引入 starter 的项目中，有一个节点是 master, 只有master 会注入 web管理端的 bean 
 
 指定 master 的方式: 配置 `dynamic-thread-pool.web.enabled = true`
 
@@ -40,10 +38,9 @@ dynamic-thread-pool:
   # 注册中心配置
   registry:
     redis:
-      host: 192.168.67.129
-      port: 16379
-      # 在 docs/dev-ops/redis/redis.conf 中可以配置
-      password: bancheng666..
+      host: XXXXXXXXXXX
+      port: XXXX
+      password: XXXXX
     # 上报线程池列表的定时任务cron
     report-cron: "0/10 * * * * ?"
   
@@ -54,16 +51,15 @@ dynamic-thread-pool:
       # 是否开启权限管理
       enable: true
       # 用户名
-      username: dtp
+      username: bread
       # 密码
-      password: dtp
+      password: bread
     # 全局请求路径前缀
     context-path: /dtp
     # 是否开启web管理页面(开启的节点作为master)
     enabled: true
     # grafana dashboard 的url
-    grafana-dashboard-url: http://192.168.67.129:3000/d/cdvvy9felux34e/e58aa8-e68081-e7babf-e7a88b-e6b1a0-e79b91-e68ea7?orgId=2&refresh=5s&theme=light
-
+    grafana-dashboard-url:http://localhost:3000/d/cdvvy9felux34e/e58aa8-e68081-e7babf-e7a88b-e6b1a0-e79b91-e68ea7?orgId=2&from=2024-11-25T02:34:39.923Z&to=2024-11-25T08:34:39.924Z&timezone=browser&var-applicationName=dynamic-thread-pool-test&var-poolName=threadPoolExecutor01&refresh=5s
   
   # 告警推送配置
   alarm:
@@ -78,11 +74,8 @@ dynamic-thread-pool:
 ```
 
 # 部署
-
 ## 1. 依赖组件部署 Redis Prometheus Grafana
-
 1. Redis 配置 `docs/dev-ops/redis/redis.conf`
-
 2. Prometheus 配置 `docs/dev-ops/prometheus/prometheus.yml`
 
    ```yaml
