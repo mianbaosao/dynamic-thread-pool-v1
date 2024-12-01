@@ -33,10 +33,10 @@ public class DynamicThreadPoolWebAutoProperties {
         private Boolean enable = false;
 
         /* 用户名, 默认是dtp */
-        private String username = "dtp";
+        private String username = "bread";
 
         /* 密码, 默认是dtp */
-        private String password = "dtp";
+        private String password = "bread";
     }
 
 

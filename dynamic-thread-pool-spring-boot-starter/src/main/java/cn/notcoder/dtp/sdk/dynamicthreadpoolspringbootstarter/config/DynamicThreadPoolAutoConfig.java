@@ -98,7 +98,9 @@ public class DynamicThreadPoolAutoConfig {
     public RTopic dynamicThreadPoolAdjustRedisTopic(
             ThreadPoolConfigAdjustListener threadPoolConfigAdjustListener,
             RedissonClient redissonClient) {
+        // 获取一个名为 DYNAMIC_THREAD_POOL_ADJUST_REDIS_TOPIC_KEY 的 Redis 主题
         RTopic topic = redissonClient.getTopic(RegistryEnum.DYNAMIC_THREAD_POOL_ADJUST_REDIS_TOPIC_KEY.getKey());
+        // 给该主题添加一个监听器，监听 UpdateThreadPoolConfigDTO 类型的消息
         topic.addListener(UpdateThreadPoolConfigDTO.class, threadPoolConfigAdjustListener);
         return topic;
     }

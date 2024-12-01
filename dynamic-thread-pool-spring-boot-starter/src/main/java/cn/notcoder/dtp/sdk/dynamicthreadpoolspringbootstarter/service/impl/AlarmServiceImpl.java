@@ -14,9 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-
+import java.util.List;import java.util.Objects;
 @Slf4j
 @EnableAsync
 public class AlarmServiceImpl implements IAlarmService {

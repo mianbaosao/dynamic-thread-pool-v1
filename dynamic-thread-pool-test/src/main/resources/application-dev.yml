@@ -22,8 +22,8 @@ dynamic-thread-pool:
   web:
     auth:
       enable: false
-      username: dtp
-      password: dtp
+      username: bread
+      password: bread
     context-path: /dtp
     enabled: true
     grafana-dashboard-url: http://localhost:3000/d/cdvvy9felux34e/e58aa8-e68081-e7babf-e7a88b-e6b1a0-e79b91-e68ea7?orgId=2&from=2024-11-25T02:34:39.923Z&to=2024-11-25T08:34:39.924Z&timezone=browser&var-applicationName=dynamic-thread-pool-test&var-poolName=threadPoolExecutor01&refresh=5s

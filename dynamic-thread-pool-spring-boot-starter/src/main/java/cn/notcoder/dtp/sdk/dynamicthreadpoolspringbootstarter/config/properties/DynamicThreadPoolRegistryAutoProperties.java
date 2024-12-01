@@ -10,5 +10,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @AllArgsConstructor
 @ConfigurationProperties(prefix = "dynamic-thread-pool.registry")
 public class DynamicThreadPoolRegistryAutoProperties {
+    //用于存储定时任务的cron表达式，表示每20秒执行一次
     private String reportCron = "0/20 * * * * ?";
 }

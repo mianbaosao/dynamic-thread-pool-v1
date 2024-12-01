@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28dcc25d-ce13-40ab-a5a2-dd1e30dc17f1" name="Changes" comment="style:补充部分注释">
+    <list default="true" id="28dcc25d-ce13-40ab-a5a2-dd1e30dc17f1" name="Changes" comment="feat:增加线程异常的抛出和告警">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/DynamicThreadPoolAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/DynamicThreadPoolAutoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/properties/DynamicThreadPoolRegistryAutoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/properties/DynamicThreadPoolRegistryAutoProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/properties/DynamicThreadPoolWebAutoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/config/properties/DynamicThreadPoolWebAutoProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/service/impl/AlarmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-spring-boot-starter/src/main/java/cn/notcoder/dtp/sdk/dynamicthreadpoolspringbootstarter/service/impl/AlarmServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dynamic-thread-pool-test/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +126,8 @@
       <workItem from="1732698685106" duration="193000" />
       <workItem from="1732699384495" duration="117000" />
       <workItem from="1732699513901" duration="2058000" />
-      <workItem from="1732706364623" duration="22475000" />
+      <workItem from="1732706364623" duration="25975000" />
+      <workItem from="1732871180901" duration="13169000" />
     </task>
     <task id="LOCAL-00001" summary="style:补充部分注释">
       <option name="closed" value="true" />
@@ -147,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732805675288</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat:增加线程异常的抛出和告警">
+      <option name="closed" value="true" />
+      <created>1732841692484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732841692484</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +170,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="style:补充部分理解注释" />
     <MESSAGE value="style:补充部分注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="style:补充部分注释" />
+    <MESSAGE value="feat:增加线程异常的抛出和告警" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:增加线程异常的抛出和告警" />
   </component>
 </project>
