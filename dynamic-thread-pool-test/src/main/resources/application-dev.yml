@@ -35,22 +35,22 @@ dynamic-thread-pool:
       - "DingDing"
 
 # 管理端点和 Prometheus 配置
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "health,info,prometheus"
-  endpoint:
-    health:
-      show-details: always
-  metrics:
-    export:
-      prometheus:
-        enabled: true
-    tags:
-      application: "${spring.application.name}"
-  health:
-    redis:
-      enabled: true
-    db:
-      enabled: true
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "health,info,prometheus"
+#  endpoint:
+#    health:
+#      show-details: always
+#  metrics:
+#    export:
+#      prometheus:
+#        enabled: true
+#    tags:
+#      application: "${spring.application.name}"
+#  health:
+#    redis:
+#      enabled: true
+#    db:
+#      enabled: true
