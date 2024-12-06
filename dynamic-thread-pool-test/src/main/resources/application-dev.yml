@@ -34,7 +34,7 @@ dynamic-thread-pool:
     use-platform:
       - "DingDing"
 
-# 管理端点和 Prometheus 配置
+# 管理端点和 Prometheus 配置 不用添加多余部分
 #management:
 #  endpoints:
 #    web:

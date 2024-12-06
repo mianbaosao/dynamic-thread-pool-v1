@@ -13,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 动态线程池服务
@@ -42,6 +44,16 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
                         executor
                 )
         ));
+        for (ThreadPoolConfigEntity threadPoolConfig : threadPools) {
+            // 假设 ThreadPoolConfigEntity 类有 getter 方法来获取配置信息
+            System.out.println(threadPoolConfig.getThreadPoolName()+" "+"配置如下:");
+            System.out.println("Application Name: " + threadPoolConfig.getApplicationName());
+            System.out.println("Thread Pool Name: " + threadPoolConfig.getThreadPoolName());
+            System.out.println("Core Pool Size: " + threadPoolConfig.getCorePoolSize());
+            System.out.println("Max Pool Size: " + threadPoolConfig.getMaximumPoolSize());
+            System.out.println("Queue Size: " + threadPoolConfig.getQueueSize());
+            System.out.println("---------------------------------");
+        }
         return threadPools;
     }
 

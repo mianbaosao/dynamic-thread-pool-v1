@@ -12,6 +12,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.List;
 
+/**
+ * 周期性地查询当前所有线程池的配置信息并且上报给注册中心
+ */
 @Slf4j
 @AllArgsConstructor
 @EnableConfigurationProperties(DynamicThreadPoolRegistryAutoProperties.class)

@@ -14,15 +14,9 @@ import java.util.Objects;
  * Redis操作工具类
  */
 public class RedisUtils {
-    public static UpdateThreadPoolConfigDTO getUpdateThreadPoolConfigDTO(
-            RedissonClient redissonClient,
-            String applicationName,
-            String poolName ) {
-        return getUpdateThreadPoolConfigDTOBucket(
-                redissonClient,
-                applicationName,
-                poolName
-        ).get();
+    public static UpdateThreadPoolConfigDTO getUpdateThreadPoolConfigDTO(RedissonClient redissonClient,
+                                                                         String applicationName, String poolName ) {
+        return getUpdateThreadPoolConfigDTOBucket(redissonClient, applicationName, poolName).get();
     }
 
     public static void setUpdateThreadPoolConfigDTO(
@@ -56,6 +50,7 @@ public class RedisUtils {
         return null;
     }
 
+    //获取单个线程池的配置
     private static RBucket<UpdateThreadPoolConfigDTO> getUpdateThreadPoolConfigDTOBucket(
             RedissonClient redissonClient,
             String applicationName,

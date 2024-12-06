@@ -73,11 +73,14 @@ public class DynamicThreadPoolAutoConfig {
         return Redisson.create(config);
     }
 
+    //此时代码里面只要有接口的实现类接口就会被自动注入
+    //注册中心的注入
     @Bean
     public IRegistry redisRegistry(RedissonClient redissonClient, IAlarmService alarmService) {
         return new RedisRegistry(redissonClient, alarmService);
     }
 
+    //定时任务类上报线程池消息
     @Bean
     public ThreadPoolDataReportJob threadPoolDataReportJob(
             IDynamicThreadPoolService dynamicThreadPoolService,
@@ -85,7 +88,7 @@ public class DynamicThreadPoolAutoConfig {
         return new ThreadPoolDataReportJob(dynamicThreadPoolService, redisRegistry);
     }
 
-
+    //注册中心监听器，当有消息发送就接受处理
     @Bean
     public ThreadPoolConfigAdjustListener threadPoolConfigAdjustListener(
             IDynamicThreadPoolService dynamicThreadPoolService,
@@ -93,7 +96,7 @@ public class DynamicThreadPoolAutoConfig {
         return new ThreadPoolConfigAdjustListener(dynamicThreadPoolService, redisRegistry);
     }
 
-
+    //订阅注册中心，发布主题
     @Bean
     public RTopic dynamicThreadPoolAdjustRedisTopic(
             ThreadPoolConfigAdjustListener threadPoolConfigAdjustListener,
@@ -105,6 +108,7 @@ public class DynamicThreadPoolAutoConfig {
         return topic;
     }
 
+    //重试监听器
     @Bean
     public ThreadPoolConfigRefreshListener threadPoolConfigRefreshListener(
             IDynamicThreadPoolService dynamicThreadPoolService,
@@ -112,6 +116,7 @@ public class DynamicThreadPoolAutoConfig {
         return new ThreadPoolConfigRefreshListener(dynamicThreadPoolService, redisRegistry);
     }
 
+    //重试主题的创建
     @Bean
     public RTopic dynamicThreadPoolRefreshRedisTopic(
             ThreadPoolConfigRefreshListener threadPoolConfigRefreshListener,
@@ -139,8 +144,7 @@ public class DynamicThreadPoolAutoConfig {
                 threadPoolExecutorMap,
                 alarmService
         );
-
-        // 获取缓存的配置信息，配置线程池
+        /*// 获取缓存的配置信息，配置线程池
         threadPoolExecutorMap.forEach((poolName, executor) -> {
             UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO = RedisUtils.getUpdateThreadPoolConfigDTO(
                     redissonClient,
@@ -154,8 +158,7 @@ public class DynamicThreadPoolAutoConfig {
                     updateThreadPoolConfigDTO
             );
 
-        });
-
+        });*/
         return dynamicThreadPoolService;
     }
 
