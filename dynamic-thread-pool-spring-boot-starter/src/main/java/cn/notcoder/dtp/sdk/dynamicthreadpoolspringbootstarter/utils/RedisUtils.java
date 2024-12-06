@@ -19,9 +19,7 @@ public class RedisUtils {
         return getUpdateThreadPoolConfigDTOBucket(redissonClient, applicationName, poolName).get();
     }
 
-    public static void setUpdateThreadPoolConfigDTO(
-            RedissonClient redissonClient,
-            UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO ) {
+    public static void setUpdateThreadPoolConfigDTO(RedissonClient redissonClient, UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO ) {
         RBucket<UpdateThreadPoolConfigDTO> updateThreadPoolConfigDTOBucket = getUpdateThreadPoolConfigDTOBucket(
                 redissonClient,
                 updateThreadPoolConfigDTO.getApplicationName(),

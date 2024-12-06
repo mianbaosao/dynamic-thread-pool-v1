@@ -20,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Redis 实现注册中心
+ * 完成THREAD_POOL_CONFIG_LIST_KEY的配置
  */
 
 @Slf4j
@@ -82,8 +83,7 @@ public class RedisRegistry implements IRegistry {
 
     }
 
-    private void reportThreadPoolRealProcess(
-            List<ThreadPoolConfigEntity> threadPoolConfigEntityList,
+    private void reportThreadPoolRealProcess(List<ThreadPoolConfigEntity> threadPoolConfigEntityList,
             RList<ThreadPoolConfigEntity> list ) {
         // 初始化索引
         int index = 0;

@@ -52,9 +52,9 @@ public class AlarmServiceImpl implements IAlarmService {
         List<ThreadPoolConfigEntity> dangerPools = new ArrayList<>();
         for (ThreadPoolConfigEntity pool : pools) {
             try {
-                // 活跃线程数达到最大 且 阻塞队列已满
+                // 活跃线程数达到最大或者阻塞队列已满
                 if (Objects.equals(pool.getActiveThreadCount(), pool.getMaximumPoolSize())
-                        && pool.getRemainingCapacity() == 0) {
+                        && pool.getRemainingCapacity () == 0) {
                     dangerPools.add(pool);
                 }
             } catch (Exception e) {

@@ -21,8 +21,7 @@ public class UpdateThreadPoolConfigDTO {
     private Integer queueCapacity;
 
 
-    public static UpdateThreadPoolConfigDTO buildUpdateThreadPoolConfigDTO(
-            ThreadPoolConfigEntity threadPoolConfigEntity ) {
+    public static UpdateThreadPoolConfigDTO buildUpdateThreadPoolConfigDTO(ThreadPoolConfigEntity threadPoolConfigEntity ) {
         return new UpdateThreadPoolConfigDTO(
                 threadPoolConfigEntity.getApplicationName(),
                 threadPoolConfigEntity.getThreadPoolName(),
