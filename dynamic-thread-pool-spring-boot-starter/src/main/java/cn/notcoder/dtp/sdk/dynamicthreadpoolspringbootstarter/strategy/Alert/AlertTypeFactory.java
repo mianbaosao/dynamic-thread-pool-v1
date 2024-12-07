@@ -23,19 +23,14 @@ import java.util.Map;
  */
 @Service
 public class AlertTypeFactory {
-
-    // 通过 @Autowired 注入配置类
     @Autowired
     private DynamicThreadPoolAlarmAutoProperties dynamicThreadPoolAlarmAutoProperties;
 
-    // 创建一个 map 来存储 alert 类型
     @Resource
     Map<String, AlertType> alertTypeMap = new HashMap<>();
 
-    // 获取 alert 类型
     public List<AlertType> getAlertType() {
         List<AlertType> alertTypeList = new LinkedList<>();
-        // 获取 usePlatform 配置项
         List<String> alertName = dynamicThreadPoolAlarmAutoProperties.getUsePlatform();
 
         for (String alert : alertName) {
@@ -48,7 +43,6 @@ public class AlertTypeFactory {
         return alertTypeList;
     }
 
-    // 发送 alert
     public void sendAlert(AlertMessageDTO alertMessageDTO) throws ApiException {
         for (AlertType alertType : getAlertType()) {
             alertType.sendAlert(alertMessageDTO);
