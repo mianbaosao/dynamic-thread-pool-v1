@@ -1,12 +1,15 @@
 package cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.registry.redis;
 
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlarmMessageDTO;
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlertMessageDTO;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.UpdateThreadPoolConfigDTO;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.entity.ThreadPoolConfigEntity;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.enums.RegistryEnum;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.registry.IRegistry;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
+
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlertService;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.AlarmServiceImpl;
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.AlertServiceImpl;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.utils.RedisUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +32,9 @@ public class RedisRegistry implements IRegistry {
 
     private RedissonClient redissonClient;
 
-    private IAlarmService alarmService;
+    //private IAlarmService alarmService;
+
+    private IAlertService alertService;
     @Override
     public void reportThreadPool(List<ThreadPoolConfigEntity> threadPoolConfigEntityList) {
         // 如果传入的线程池配置列表为空，则直接返回
@@ -37,8 +42,8 @@ public class RedisRegistry implements IRegistry {
             return;
         }
         // 如果可以发送线程池危险警报，则发送警报
-        if (AlarmServiceImpl.canSendForThreadPoolDanger()) {
-            alarmService.sendIfThreadPoolHasDanger(threadPoolConfigEntityList);
+        if (AlertServiceImpl.canSendForThreadPoolDanger()) {
+            alertService.sendIfThreadPoolHasDanger(threadPoolConfigEntityList);
         }
         // 获取Redis中的线程池配置列表
         RList<ThreadPoolConfigEntity> list = RedisUtils.getPoolConfigRList(redissonClient);
@@ -50,7 +55,6 @@ public class RedisRegistry implements IRegistry {
 
         // 获取Redis锁
         RLock lock = redissonClient.getLock(RegistryEnum.REPORT_THREAD_POOL_CONFIG_LIST_REDIS_LOCK_KEY.getKey());
-
         try {
             // 尝试获取Redis锁，如果获取成功，则执行上报线程池配置列表的真正处理过程
             boolean canHasLock = lock.tryLock(3000, 3000, TimeUnit.MILLISECONDS);
@@ -60,9 +64,8 @@ public class RedisRegistry implements IRegistry {
             }
         } catch (Exception e) {
             // 发送警报
-            alarmService.send(
-                    AlarmMessageDTO
-                            .buildAlarmMessageDTO("上报线程池列表出错")
+            alertService.send(AlertMessageDTO
+                            .buildAlertMessageDTO("上报线程池列表出错")
                             .appendParameter("错误原因", e.toString())
             );
             // 记录错误日志
@@ -83,13 +86,12 @@ public class RedisRegistry implements IRegistry {
 
     }
 
-    private void reportThreadPoolRealProcess(List<ThreadPoolConfigEntity> threadPoolConfigEntityList,
-            RList<ThreadPoolConfigEntity> list ) {
+    private void reportThreadPoolRealProcess(List<ThreadPoolConfigEntity> threadPoolConfigEntityList,RList<ThreadPoolConfigEntity> list)
+    {
         // 初始化索引
         int index = 0;
         // 获取传入的线程池配置列表中的第一个线程池配置的应用名称
         String applicationName = threadPoolConfigEntityList.get(0).getApplicationName();
-
         // 获取Redis中的线程池配置列表的大小
         int listSize = list.size();
         // 获取本应用线程池的开始索引
@@ -120,6 +122,7 @@ public class RedisRegistry implements IRegistry {
 
             // 当前应用某线程池发生了修改
             if (!Objects.equals(originalPoolConfig.toString(), newPoolConfig.toString())) {
+                // 从列表中快速删除指定索引的元素
                 list.fastRemove(index);
                 list.add(index, newPoolConfig);
             }

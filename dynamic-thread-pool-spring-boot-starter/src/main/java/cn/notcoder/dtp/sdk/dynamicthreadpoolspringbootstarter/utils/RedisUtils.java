@@ -20,6 +20,7 @@ public class RedisUtils {
     }
 
     public static void setUpdateThreadPoolConfigDTO(RedissonClient redissonClient, UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO ) {
+       //RBucket相当于redis中的String类型
         RBucket<UpdateThreadPoolConfigDTO> updateThreadPoolConfigDTOBucket = getUpdateThreadPoolConfigDTOBucket(
                 redissonClient,
                 updateThreadPoolConfigDTO.getApplicationName(),
@@ -49,16 +50,8 @@ public class RedisUtils {
     }
 
     //获取单个线程池的配置
-    private static RBucket<UpdateThreadPoolConfigDTO> getUpdateThreadPoolConfigDTOBucket(
-            RedissonClient redissonClient,
-            String applicationName,
-            String poolName) {
-        return redissonClient.getBucket(
-                buildRedisKey(
-                        applicationName,
-                        poolName
-                )
-        );
+    private static RBucket<UpdateThreadPoolConfigDTO> getUpdateThreadPoolConfigDTOBucket(RedissonClient redissonClient, String applicationName, String poolName) {
+        return redissonClient.getBucket(buildRedisKey(applicationName, poolName));
     }
 
     private static String buildRedisKey(String applicationName, String poolName) {

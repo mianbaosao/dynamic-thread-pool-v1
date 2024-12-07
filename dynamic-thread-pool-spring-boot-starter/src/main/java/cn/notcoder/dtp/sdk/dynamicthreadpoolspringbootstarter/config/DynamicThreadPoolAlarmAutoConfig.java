@@ -1,8 +1,10 @@
 package cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.config;
 
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.config.properties.DynamicThreadPoolAlarmAutoProperties;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.AlarmServiceImpl;
+
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlertService;
+
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.AlertServiceImpl;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -15,9 +17,12 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.strategy")
 public class DynamicThreadPoolAlarmAutoConfig {
 
-    @Bean
+   /* @Bean
     public IAlarmService alarmService() {
         return new AlarmServiceImpl();
-    }
+    }*/
+
+    @Bean
+    public IAlertService alertService() {return new AlertServiceImpl();}
 
 }

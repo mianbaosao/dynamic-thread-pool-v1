@@ -1,10 +1,12 @@
 package cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl;
 
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlarmMessageDTO;
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlertMessageDTO;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.UpdateThreadPoolConfigDTO;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.entity.ThreadPoolConfigEntity;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.hook.ResizableCapacityLinkedBlockingQueue;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlertService;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IDynamicThreadPoolService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +33,7 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
     //其中的键是线程池的名称（beanName）threadPoolExecutor01、threadPoolExecutor02
     private Map<String, ThreadPoolExecutor> threadPoolExecutorMap;
 
-    private IAlarmService alarmService;
+    private IAlertService alertService;
 
     @Override
     public List<ThreadPoolConfigEntity> queryThreadPoolList() {
@@ -90,9 +92,9 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
         Integer maximumPoolSize = updateThreadPoolConfigDTO.getMaximumPoolSize();
         // CorePoolSize 小于等于 MaximumPoolSize, 否则发出告警
         if (maximumPoolSize < corePoolSize) {
-            alarmService.send(
-                    AlarmMessageDTO
-                            .buildAlarmMessageDTO("变更配置出错")
+            alertService.send(
+                    AlertMessageDTO
+                            .buildAlertMessageDTO("变更配置出错")
                             .appendParameter("错误原因", "最大线程数小于核心线程数")
                             .appendParameter("最大线程数", maximumPoolSize)
                             .appendParameter("核心线程数", corePoolSize)

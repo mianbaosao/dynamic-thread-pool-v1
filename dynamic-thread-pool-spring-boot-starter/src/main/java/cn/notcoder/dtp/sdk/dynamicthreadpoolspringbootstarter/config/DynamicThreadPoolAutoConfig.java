@@ -7,8 +7,9 @@ import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.enums.Regist
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.registry.IRegistry;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.registry.redis.RedisRegistry;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
+import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlertService;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IDynamicThreadPoolService;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.AlarmServiceImpl;
+
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.impl.DynamicThreadPoolServiceImpl;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.trigger.job.ThreadPoolDataReportJob;
 import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.trigger.listener.ThreadPoolConfigAdjustListener;
@@ -75,9 +76,14 @@ public class DynamicThreadPoolAutoConfig {
 
     //此时代码里面只要有接口的实现类接口就会被自动注入
     //注册中心的注入
-    @Bean
+   /* @Bean
     public IRegistry redisRegistry(RedissonClient redissonClient, IAlarmService alarmService) {
         return new RedisRegistry(redissonClient, alarmService);
+    }*/
+
+    @Bean
+    public IRegistry redisRegistry(RedissonClient redissonClient, IAlertService alertService) {
+        return new RedisRegistry(redissonClient, alertService);
     }
 
     //定时任务类上报线程池消息
@@ -131,7 +137,7 @@ public class DynamicThreadPoolAutoConfig {
             ApplicationContext applicationContext,
             Map<String, ThreadPoolExecutor> threadPoolExecutorMap,
             RedissonClient redissonClient,
-            IAlarmService alarmService
+            IAlertService alertService
     ) {
         String applicationName = ApplicationUtils.getApplicationName(applicationContext);
         if (StringUtils.isBlank(applicationName)) {
@@ -142,23 +148,8 @@ public class DynamicThreadPoolAutoConfig {
         DynamicThreadPoolServiceImpl dynamicThreadPoolService = new DynamicThreadPoolServiceImpl(
                 applicationName,
                 threadPoolExecutorMap,
-                alarmService
+                alertService
         );
-        /*// 获取缓存的配置信息，配置线程池
-        threadPoolExecutorMap.forEach((poolName, executor) -> {
-            UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO = RedisUtils.getUpdateThreadPoolConfigDTO(
-                    redissonClient,
-                    applicationName,
-                    poolName
-            );
-            if (updateThreadPoolConfigDTO == null) {
-                return;
-            }
-            dynamicThreadPoolService.updateThreadPoolConfig(
-                    updateThreadPoolConfigDTO
-            );
-
-        });*/
         return dynamicThreadPoolService;
     }
 
@@ -187,13 +178,18 @@ public class DynamicThreadPoolAutoConfig {
 
 
     @Bean
+    // 定义一个名为customMeterFilter的Bean
     public MeterFilter customMeterFilter() {
+        // 返回一个MeterFilter对象
         return new MeterFilter() {
+            // 重写accept方法
             @Override
             public MeterFilterReply accept(Meter.Id id) {
+                // 如果id的名称包含"thread_pool"，则接受
                 if (id.getName().contains("thread_pool")) {
                     return MeterFilterReply.ACCEPT;
                 }
+                // 否则拒绝
                 return MeterFilterReply.DENY;
             }
         };
