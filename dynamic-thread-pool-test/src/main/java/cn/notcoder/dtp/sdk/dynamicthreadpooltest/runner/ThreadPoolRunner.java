@@ -15,6 +15,9 @@ public class ThreadPoolRunner implements ApplicationRunner {
     @Resource
     private ThreadPoolExecutor threadPoolExecutor01;
 
+    @Resource
+    private ThreadPoolExecutor threadPoolExecutor02;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         // 创建一个线程
@@ -31,12 +34,12 @@ public class ThreadPoolRunner implements ApplicationRunner {
                             // 让线程休眠启动时间
                             TimeUnit.SECONDS.sleep(startDuration);
                             // 输出启动时间
-                            System.out.printf("启动花费时间: %ds\n", startDuration);
+                            // System.out.printf("启动花费时间: %ds\n", startDuration);
 
                             // 让线程休眠运行时间
                             TimeUnit.SECONDS.sleep(runDuration);
                             // 输出运行时间
-                            System.out.printf("运行花费时间: %ds\n", runDuration);
+                            //System.out.printf("运行花费时间: %ds\n", runDuration);
                         } catch (InterruptedException e) {
                             // 抛出运行时异常
                             throw new RuntimeException(e);
@@ -45,9 +48,43 @@ public class ThreadPoolRunner implements ApplicationRunner {
                     // 让线程休眠1到10秒
                     Thread.sleep((random.nextInt(10) + 1) * 1000);
                 }
-            } catch (Exception e) {}
+            } catch (Exception e) {
+            }
         });
         // 启动线程
         t.start();
+
+        Thread t2 = new Thread(() -> {
+            try {
+                while (true) {
+                    Random random = new Random();
+                    int startDuration = random.nextInt(5) + 1;
+                    // 生成一个1到10之间的随机数作为运行时间
+                    int runDuration = random.nextInt(10) + 1;
+                    // 提交一个任务到线程池
+                    threadPoolExecutor02.submit(() -> {
+                        try {
+                            // 让线程休眠启动时间
+                            TimeUnit.SECONDS.sleep(startDuration);
+                            // 输出启动时间
+                            // System.out.printf("启动花费时间: %ds\n", startDuration);
+
+                            // 让线程休眠运行时间
+                            TimeUnit.SECONDS.sleep(runDuration);
+                            // 输出运行时间
+                            //System.out.printf("运行花费时间: %ds\n", runDuration);
+                        } catch (InterruptedException e) {
+                            // 抛出运行时异常
+                            throw new RuntimeException(e);
+                        }
+                    });
+                    // 让线程休眠1到10秒
+                    Thread.sleep((random.nextInt(10) + 1) * 1000);
+                }
+            } catch (Exception e) {
+            }
+        });
+        // 启动线程
+        t2.start();
     }
 }

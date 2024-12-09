@@ -140,6 +140,7 @@ public class DynamicThreadPoolAutoConfig {
             IAlertService alertService
     ) {
         String applicationName = ApplicationUtils.getApplicationName(applicationContext);
+        int port = ApplicationUtils.getPort(applicationContext);
         if (StringUtils.isBlank(applicationName)) {
             log.warn("动态线程池启动提示。SpringBoot 应用未配置应用名(spring.application.name)");
         }
@@ -147,6 +148,7 @@ public class DynamicThreadPoolAutoConfig {
         // 创建Bean
         DynamicThreadPoolServiceImpl dynamicThreadPoolService = new DynamicThreadPoolServiceImpl(
                 applicationName,
+                port,
                 threadPoolExecutorMap,
                 alertService
         );

@@ -30,6 +30,7 @@ public class ThreadPoolConfigAdjustListener implements MessageListener<UpdateThr
         Boolean success = dynamicThreadPoolService.updateThreadPoolConfig(updateThreadPoolConfigDTO);
         if (!success) {
             log.warn("动态线程池, 配置变更结果: {}, 配置参数: {}", success, updateThreadPoolConfigDTO);
+            return;
         }
         log.info("动态线程池, 配置变更结果: {}, 配置参数: {}", success, updateThreadPoolConfigDTO);
 

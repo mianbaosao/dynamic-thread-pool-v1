@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class TestController {
 
-    @Resource
+    /*@Resource
     private ThreadPoolExecutor threadPoolExecutor02;
 
     @GetMapping("/dos")
@@ -19,7 +19,7 @@ public class TestController {
             for (int i = 0; i < 100; i++) {
                 threadPoolExecutor02.submit(() -> {
                     try {
-                        /*TimeUnit.SECONDS.sleep(60 * 2);*/
+                        *//*TimeUnit.SECONDS.sleep(60 * 2);*//*
                         int s=1+1;
                         System.out.print(s);
                     } catch (Exception ignored) {
@@ -28,5 +28,5 @@ public class TestController {
             }
         }).start();
 
-    }
+    }*/
 }

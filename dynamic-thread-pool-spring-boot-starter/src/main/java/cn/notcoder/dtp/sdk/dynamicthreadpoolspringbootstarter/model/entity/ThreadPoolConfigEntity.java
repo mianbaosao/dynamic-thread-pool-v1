@@ -1,5 +1,7 @@
 package cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +20,8 @@ public class ThreadPoolConfigEntity {
 
     /** 应用名称 */
     private String applicationName;
+    /** 当前端口数 */
+    private Integer port;
     /** 线程池名称 */
     private String threadPoolName;
     /** 核心线程数 */
@@ -44,11 +48,13 @@ public class ThreadPoolConfigEntity {
      */
     public static ThreadPoolConfigEntity buildThreadPoolConfigEntity(
             String applicationName,
+            Integer port,
             String threadPoolName,
             ThreadPoolExecutor executor) {
 
         return new ThreadPoolConfigEntity(
                 applicationName,
+                port,
                 threadPoolName,
                 executor.getCorePoolSize(),
                 executor.getMaximumPoolSize(),
@@ -59,4 +65,5 @@ public class ThreadPoolConfigEntity {
                 executor.getQueue().remainingCapacity()
         );
     }
+
 }

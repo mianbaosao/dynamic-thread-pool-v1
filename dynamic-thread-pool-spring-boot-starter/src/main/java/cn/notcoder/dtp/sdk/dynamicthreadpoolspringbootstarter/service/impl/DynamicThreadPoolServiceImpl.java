@@ -11,10 +11,7 @@ import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IDynamicTh
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -30,6 +27,8 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
 
     private String applicationName;
 
+    private int port;
+
     //其中的键是线程池的名称（beanName）threadPoolExecutor01、threadPoolExecutor02
     private Map<String, ThreadPoolExecutor> threadPoolExecutorMap;
 
@@ -42,14 +41,17 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
         threadPoolExecutorMap.forEach((beanName, executor) -> threadPools.add(
                 ThreadPoolConfigEntity.buildThreadPoolConfigEntity(
                         applicationName,
+                        port,
                         beanName,
                         executor
                 )
         ));
+
         for (ThreadPoolConfigEntity threadPoolConfig : threadPools) {
             // 假设 ThreadPoolConfigEntity 类有 getter 方法来获取配置信息
             System.out.println(threadPoolConfig.getThreadPoolName()+" "+"配置如下:");
             System.out.println("Application Name: " + threadPoolConfig.getApplicationName());
+            System.out.println("Port: " + threadPoolConfig.getPort());
             System.out.println("Thread Pool Name: " + threadPoolConfig.getThreadPoolName());
             System.out.println("Core Pool Size: " + threadPoolConfig.getCorePoolSize());
             System.out.println("Max Pool Size: " + threadPoolConfig.getMaximumPoolSize());
@@ -63,6 +65,7 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
     public ThreadPoolConfigEntity queryThreadPoolByName(String threadPoolName) {
         return ThreadPoolConfigEntity.buildThreadPoolConfigEntity(
                 applicationName,
+                port,
                 threadPoolName,
                 threadPoolExecutorMap.get(threadPoolName)
         );
