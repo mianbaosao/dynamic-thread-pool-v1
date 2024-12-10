@@ -152,6 +152,21 @@ public class DynamicThreadPoolAutoConfig {
                 threadPoolExecutorMap,
                 alertService
         );
+
+        // 获取缓存的配置信息，配置线程池
+        threadPoolExecutorMap.forEach((poolName, executor) -> {
+            UpdateThreadPoolConfigDTO updateThreadPoolConfigDTO = RedisUtils.getUpdateThreadPoolConfigDTO(
+                    redissonClient,
+                    applicationName,
+                    poolName
+            );
+            if (updateThreadPoolConfigDTO == null) {
+                return;
+            }
+            dynamicThreadPoolService.updateThreadPoolConfig(
+                    updateThreadPoolConfigDTO
+            );
+        });
         return dynamicThreadPoolService;
     }
 
