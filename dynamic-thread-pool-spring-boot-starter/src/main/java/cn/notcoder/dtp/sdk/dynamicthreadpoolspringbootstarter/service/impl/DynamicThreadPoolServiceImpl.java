@@ -46,7 +46,6 @@ public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
                         executor
                 )
         ));
-
         for (ThreadPoolConfigEntity threadPoolConfig : threadPools) {
             // 假设 ThreadPoolConfigEntity 类有 getter 方法来获取配置信息
             System.out.println(threadPoolConfig.getThreadPoolName()+" "+"配置如下:");

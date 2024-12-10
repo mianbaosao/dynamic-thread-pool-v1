@@ -33,24 +33,3 @@ dynamic-thread-pool:
       ding-ding: 586cb499795791acf61a20977c4cc2d76cf941f3777fa1d75240b12f3ba5de0e
     use-platform:
       - "DingDing"
-
-# 管理端点和 Prometheus 配置 不用添加多余部分
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "health,info,prometheus"
-#  endpoint:
-#    health:
-#      show-details: always
-#  metrics:
-#    export:
-#      prometheus:
-#        enabled: true
-#    tags:
-#      application: "${spring.application.name}"
-#  health:
-#    redis:
-#      enabled: true
-#    db:
-#      enabled: true

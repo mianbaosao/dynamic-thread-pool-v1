@@ -112,7 +112,6 @@ public class RedisRegistry implements IRegistry {
         for (int i = 0; i < threadPoolConfigEntityList.size(); i++, index++) {
             ThreadPoolConfigEntity newPoolConfig = threadPoolConfigEntityList.get(i);
             boolean isRunning = isApplicationRunning(newPoolConfig.getPort()); // 检查应用是否运行
-
             // 如果应用正在运行，则加入有效列表
             if (isRunning) {
                 validThreadPools.add(newPoolConfig);
@@ -120,20 +119,17 @@ public class RedisRegistry implements IRegistry {
                 // 输出未运行的配置，并跳过
                 log.info("应用在端口 " + newPoolConfig.getPort() + " 上没有运行，已删除该配置");
             }
-
             // 如果 Redis 中的线程池列表已经遍历完，直接添加新的配置
             if (index >= listSize) {
                 list.add(newPoolConfig);
                 continue;
             }
-
             ThreadPoolConfigEntity originalPoolConfig = list.get(index);
             // 如果是不同的应用，插入到列表中
             if (!Objects.equals(originalPoolConfig.getApplicationName(), applicationName)) {
                 list.add(index + 1, newPoolConfig);
                 continue;
             }
-
             // 如果当前应用的某个线程池发生了修改
             if (!Objects.equals(originalPoolConfig.toString(), newPoolConfig.toString())) {
                 // 从列表中删除指定索引的元素
