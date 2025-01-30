@@ -1,4 +1,4 @@
-package cn.notcoder.dtp.sdk.dynamicthreadpooltest.config.propertis;
+package cn.bread.dtp.sdk.dynamicthreadpooltest.config.propertis;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cn.notcoder.dtp</groupId>
+        <groupId>cn.bread.dtp</groupId>
         <artifactId>dynamic-thread-pool</artifactId>
         <version>1.0</version>
     </parent>
@@ -57,7 +57,7 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.notcoder.dtp</groupId>
+            <groupId>cn.bread.dtp</groupId>
             <artifactId>dynamic-thread-pool-spring-boot-starter</artifactId>
             <version>1.0</version>
         </dependency>
@@ -100,7 +100,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>cn.notcoder.dtp.sdk.dynamicthreadpooltest.DynamicThreadPoolTestApplication</mainClass>
+                    <mainClass>cn.bread.dtp.sdk.dynamicthreadpooltest.DynamicThreadPoolTestApplication</mainClass>
                     <layout>JAR</layout>
                 </configuration>
             </plugin>

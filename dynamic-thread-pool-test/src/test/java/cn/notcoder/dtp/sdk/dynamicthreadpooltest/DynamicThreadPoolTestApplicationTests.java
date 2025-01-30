@@ -1,11 +1,11 @@
-package cn.notcoder.dtp.sdk.dynamicthreadpooltest;
+package cn.bread.dtp.sdk.dynamicthreadpooltest;
 
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.config.properties.DynamicThreadPoolAlarmAutoProperties;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlarmMessageDTO;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.UpdateThreadPoolConfigDTO;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IDynamicThreadPoolService;
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.strategy.alarm.AbstractAlarmStrategy;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.config.properties.DynamicThreadPoolAlarmAutoProperties;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.AlarmMessageDTO;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.model.dto.UpdateThreadPoolConfigDTO;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IAlarmService;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.service.IDynamicThreadPoolService;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.strategy.alarm.AbstractAlarmStrategy;
 import com.dingtalk.api.DefaultDingTalkClient;
 import com.dingtalk.api.DingTalkClient;
 import com.dingtalk.api.request.OapiRobotSendRequest;

@@ -1,4 +1,4 @@
-package cn.notcoder.dtp.sdk.dynamicthreadpooltest;
+package cn.bread.dtp.sdk.dynamicthreadpooltest;
 
 
 import org.springframework.boot.SpringApplication;

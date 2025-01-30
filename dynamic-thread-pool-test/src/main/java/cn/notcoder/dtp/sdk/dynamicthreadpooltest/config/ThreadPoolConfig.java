@@ -1,12 +1,12 @@
-package cn.notcoder.dtp.sdk.dynamicthreadpooltest.config;
+package cn.bread.dtp.sdk.dynamicthreadpooltest.config;
 
-import cn.notcoder.dtp.sdk.dynamicthreadpoolspringbootstarter.model.hook.ResizableCapacityLinkedBlockingQueue;
+import cn.bread.dtp.sdk.dynamicthreadpoolspringbootstarter.model.hook.ResizableCapacityLinkedBlockingQueue;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
-import cn.notcoder.dtp.sdk.dynamicthreadpooltest.config.propertis.ThreadPoolConfigAutoProperties;
+import cn.bread.dtp.sdk.dynamicthreadpooltest.config.propertis.ThreadPoolConfigAutoProperties;
 
 import java.util.concurrent.*;
 
